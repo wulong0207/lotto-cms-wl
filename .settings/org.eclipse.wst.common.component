@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="lotto-cms">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="lotto-skeleton-wl-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/lotto-skeleton-wl/lotto-skeleton-wl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="lotto-cms"/>
+        <property name="java-output-path" value="/lotto-cms/target/classes"/>
+    </wb-module>
+</project-modules>

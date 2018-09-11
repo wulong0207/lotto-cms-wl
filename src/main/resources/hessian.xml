@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-4.1.xsd   
+          http://www.springframework.org/schema/context   
+          http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+	
+    <!-- hessian 接口-->
+	<bean id="sgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+	   <property name="serviceUrl" value="${lotto_core_url}${remote_cmsSysMgr_service}"></property>
+	   <property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.ISysMgrService"></property>
+	   <property name="connectTimeout" value="${connectTimeout}"></property>
+	   <property name="readTimeout" value="${readTimeout}"></property>
+	   <property name="username" value="${hessian_username}"></property>
+       <property name="password" value="${hessian_password}"></property>
+	   
+	</bean>
+	
+	<bean id="iLotteryMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+	   <property name="serviceUrl" value="${lotto_core_url}${remote_cmsLotteryMgr_service}"></property>
+	   <property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.ILotteryMgrService"></property>
+	   <property name="connectTimeout" value="${connectTimeout}"></property>
+	   <property name="readTimeout" value="${readTimeout}"></property>
+	   <property name="username" value="${hessian_username}"></property>
+       <property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<bean id="iCustomerMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+	   <property name="serviceUrl" value="${lotto_core_url}${remote_cmsCustomerMgr_service}"></property>
+	   <property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.ICustomerMgrService"></property>
+	   <property name="connectTimeout" value="${connectTimeout}"></property>
+	   <property name="readTimeout" value="${readTimeout}"></property>
+	   <property name="username" value="${hessian_username}"></property>
+       <property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<bean id="iOrderMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+	   <property name="serviceUrl" value="${lotto_core_url}${remote_cmsOrderMgr_service}"></property>
+	   <property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.IOrderMgrService"></property>
+	   <property name="connectTimeout" value="${connectTimeout}"></property>
+	   <property name="readTimeout" value="${readTimeout}"></property>
+	   <property name="username" value="${hessian_username}"></property>
+       <property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<bean id="iOperateMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+	   <property name="serviceUrl" value="${lotto_core_url}${remote_cmsOperateMgr_service}"></property>
+	   <property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.IOperateMgrService"></property>
+	   <property name="connectTimeout" value="${connectTimeout}"></property>
+	   <property name="readTimeout" value="${readTimeout}"></property>
+	   <property name="username" value="${hessian_username}"></property>
+       <property name="password" value="${hessian_password}"></property>
+	</bean>
+
+	<bean id="iSportBallMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_core_url}${remote_sportBallMgrService_service}"></property>
+		<property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.ISportBallMgrService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+        <property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<bean id="iTaskMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_core_url}${remote_cmsTaskMgr_service}"></property>
+		<property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.ITaskMgrService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+        <property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<bean id="iTransMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_core_url}${remote_cmsTransMgr_service}"/>
+		<property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.ITransMgrService"/>
+		<property name="connectTimeout" value="${connectTimeout}"/>
+		<property name="readTimeout" value="${readTimeout}"/>
+		<property name="username" value="${hessian_username}"></property>
+        <property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<bean id="iTicketMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_core_url}${remote_cmsTicketMgr_service}"/>
+		<property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.ITicketMgrService"/>
+		<property name="connectTimeout" value="${connectTimeout}"/>
+		<property name="readTimeout" value="${readTimeout}"/>
+		<property name="username" value="${hessian_username}"></property>
+        <property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<bean id="iUserWalletMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_core_url}${remote_cmsUserWalletMgr_service}"></property>
+		<property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.IUserWalletMgrService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+       <property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<bean id="iPaymentMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_core_url}${remote_cmsPaymentMgr_service}"></property>
+		<property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.IPaymentMgrService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+       <property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<bean id="iCustomerServiceMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_core_url}${remote_cmsCustomerServiceMgr_service}"></property>
+		<property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.ICustomerServiceMgrService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+       <property name="password" value="${hessian_password}"></property>
+	</bean>
+	<bean id="iRedisMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_core_url}${remote_redisMgrService_service}"></property>
+		<property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.IRedisMgrService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+       	<property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<!-- 添加lotto-pay hession接口 -->
+	<bean id="userWalletMgrService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_pay_url}${remote_user_wallet_service}"></property>
+		<property name="serviceInterface" value="com.hhly.usercore.cms.remote.service.UserWalletService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+        <property name="password" value="${hessian_password}"></property>		
+	</bean>	
+	<bean id="rechargeService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_pay_url}${remote_pay_recharge_service}"></property>
+		<property name="serviceInterface" value="com.hhly.pay.service.RechargeService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+        <property name="password" value="${hessian_password}"></property>		
+	</bean>	
+			<!--提款确认管理 远程服务 -->
+	<bean id="iTransTakenConfirmService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_pay_url}${remote_trans_taken_confirm_service}"></property>
+		<property name="serviceInterface" value="com.hhly.pay.service.TransTakenConfirmService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+        <property name="password" value="${hessian_password}"></property>	
+	</bean>
+	<!-- cms缓存管理 -->
+	<bean id="iCmsCacheService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_core_url}${remote_cmsCache_service}"></property>
+		<property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.ICmsCacheService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+       <property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<!-- cms缓存管理 -->
+	<bean id="iReportService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_report_url}${remote_report_service}"></property>
+		<property name="serviceInterface" value="com.hhly.report.remote.service.IReportService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+       <property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<!-- 充值数据 -->
+	<bean id="iRechargeService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_report_url}${remote_recharge_service}"></property>
+		<property name="serviceInterface" value="com.hhly.report.remote.service.IRechargeService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+       <property name="password" value="${hessian_password}"></property>
+	</bean>
+	
+	<!-- 盈利率 -->
+	<bean id="IEarnRateService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_report_url}${remote_earnRate_service}"></property>
+		<property name="serviceInterface" value="com.hhly.report.remote.service.IEarnRateService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+       <property name="password" value="${hessian_password}"></property>
+	</bean>
+			<!--补发红包 -->
+	<bean id="reissueActivityService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_activity_url}${remote_activity_reissue_service}"></property>
+		<property name="serviceInterface" value="com.hhly.activity.remote.service.ReissueActivityService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+        <property name="password" value="${hessian_password}"></property>	
+	</bean>
+
+
+    <!--积分系统 -->
+    <bean id="iCooperateService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+        <property name="serviceUrl" value="${lotto_core_url}${remote_cooperate_service}"></property>
+        <property name="serviceInterface" value="com.hhly.cmscore.cms.remote.service.ICooperateService"></property>
+        <property name="connectTimeout" value="${connectTimeout}"></property>
+        <property name="readTimeout" value="${readTimeout}"></property>
+        <property name="username" value="${hessian_username}"></property>
+        <property name="password" value="${hessian_password}"></property>
+    </bean>
+    
+    <!--代理系统 月度统计 -->
+	<bean id="agentCallReportService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_report_url}${remote_agent_report_service}"></property>
+		<property name="serviceInterface" value="com.hhly.agent.remote.service.AgentReportService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+        <property name="password" value="${hessian_password}"></property>	
+	</bean>
+	
+	<!--代理系统  用户信息-->
+	<bean id="agentUserInfoService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_core_url}${remote_agent_user_info_service}"></property>
+		<property name="serviceInterface" value="com.hhly.agent.remote.service.AgentUserInfoService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+        <property name="password" value="${hessian_password}"></property>	
+	</bean>
+	<bean id="iAgentService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${lotto_pay_url}${remote_pay_agent_service}"></property>
+		<property name="serviceInterface" value="com.hhly.pay.service.IAgentService"></property>
+		<property name="connectTimeout" value="${connectTimeout}"></property>
+		<property name="readTimeout" value="${readTimeout}"></property>
+		<property name="username" value="${hessian_username}"></property>
+		<property name="password" value="${hessian_password}"></property>
+	</bean>
+
+    <bean id="iRcmdService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+        <property name="serviceUrl" value="${lotto_report_url}${remote_rcmd_service}"></property>
+        <property name="serviceInterface" value="com.hhly.report.remote.service.IRcmdService"></property>
+        <property name="connectTimeout" value="${connectTimeout}"></property>
+        <property name="readTimeout" value="${readTimeout}"></property>
+        <property name="username" value="${hessian_username}"></property>
+        <property name="password" value="${hessian_password}"></property>
+    </bean>
+</beans>

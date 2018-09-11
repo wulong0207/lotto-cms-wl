@@ -1,0 +1,309 @@
+/** 公共基础样式 **/
+*{
+    box-sizing: border-box;
+}
+/** 添加chrome浏览器字体控制 **/
+body{-webkit-text-size-adjust:none;}
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre,form, fieldset, legend, button, input, textarea, th, td {margin: 0; padding: 0;}
+/** 设置默认字体 **/
+body,button, input, select, textarea /* for ie */ {font: 12px/1.5 tahoma, arial,"microsoft yahei", sans-serif;outline: none}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var,i { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+
+/** 重置文本格式元素 **/
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/** 重置表单元素 **/
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea { font-size: 100%;  font-family: "microsoft yahei","Hiragino Sans GB";} /* 使得表单元素在 ie 下能继承字体大小 */
+img,input, select{vertical-align: middle;} /* 使得表单元素居中 */
+
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; width: 100%; }
+
+.clear{clear: both;zoom:1;}
+.clearfix{zoom:1;}
+.clearfix:after{content:" ";font-size:0;display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+.hidden{display: none;}
+.nospace{font-size: 0; height: 0; line-height: 0;}
+.fl{float: left;}
+.fr{float: right;}
+
+/*彩票监控整体*/
+
+body{
+    background-color: #020c16;
+}
+.lotM-body{
+    min-width:1500px;
+    width:100%;
+    height:100%;
+    background:#020c16;
+    color:#ccc;
+    margin:0 auto;
+}
+/********************************lotM-header 头部***************************/
+.lotM-header{
+    background:#1f3948;
+    border-left:1px solid #193243;
+    border-right:1px solid #193243;
+    border-bottom:1px solid #193243;
+    padding:0 15px;
+    height:50px;
+    line-height:48px;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index:9999;
+}
+.lotM-header h1{
+    color: #fff;
+    font-size:16px;
+    float: left;
+    margin-right:20px;
+}
+.lotM-headlist{
+    float: left;
+}
+.lotM-headlist>li{
+    float: left;
+    margin-right:20px;
+}
+.lotM-headlist select,.lotM-headlist input{
+    margin:0 5px;
+}
+.lotM-headlist>li select{
+    background: #86262c;
+    color:#fff;
+    border:none;
+    height:24px;
+    line-height:24px;
+    vertical-align: inherit;
+}
+.lotM-headlist>li .account-money{
+    font-size: 14px;
+}
+.lotM-headlist>li .account-money em{
+    font-size:20px;
+    color: #fff;
+    vertical-align: bottom;
+}
+.lotM-header .now-time{
+    float: right;
+    color: #95a0aa;
+    font-weight:bold;
+}
+.lotM-header .now-time em{
+    color: #33ff33;
+    font-size:16px;
+    font-family:"Microsoft YaHei";
+    text-shadow:0px 0px 5px #3dff58 ;
+}
+
+
+/***************************lotM-main 表格****************************/
+.lotM-main{
+    margin-top:76px;
+}
+.lotM-table{
+    width:100%;
+}
+.lotM-table thead tr{
+    width:100%;
+    position: fixed;
+    top:50px;
+    left:0;
+}
+.lotM-table tbody tr{
+    background-color: #061b2e;
+}
+.lotM-table tbody tr.trOdd{
+    background-color: #030f1c;
+}
+.lotM-table th{
+    background:#122b3d;
+    color: #6a7b8a;
+    line-height:26px;
+    border-left:1px solid #021629;
+    border-bottom: 1px solid #021629;
+    font-weight:normal;
+    font-size:12px;
+}
+.lotM-table td{
+    text-align: center;
+    border-left:1px solid #021629;
+    border-bottom:1px solid #021629;
+}
+.lotM-table td.lotM-id{
+    width:8%;
+    color: #bbccdc;
+    line-height:22px;
+}
+.lotM-table td.lotM-id span{
+    display: block;
+    font-size:16px;
+}
+.lotM-table td.lotM-date{
+    width:8%;
+    color: #9bacbb;
+}
+.lotM-table td.lotM-date.fs-red{
+    color: #d13138;
+}
+.lotM-table td.lotM-date span{
+    display: block;
+    font-size:20px;
+}
+.lotM-table td.lotM-date em{
+    font-size:12px;
+}
+.lotM-table td.lotM-num{
+    width:8%;
+    color: #bbccdc;
+    font-size:28px;
+    line-height:60px;
+}
+.lotM-table td.lotM-num.bg-red{
+    color: #fff;
+    background:#cc0000;
+}
+.lotM-table td.lotM-num.fc-orange{
+    color: #e66e0c;
+}
+
+/***出票商***/
+.lotM-table .cps{
+    width:425px;
+    min-width:425px;
+}
+.lotM-table th.cps span{
+    width:105px;
+    float: left;
+    border-left:1px solid #021629;
+}
+.lotM-table th.cps span:first-child{
+    border-left:none;
+ }
+
+.lotM-table td.cps .cps-item{
+    overflow: hidden;
+}
+.lotM-table td.cps .cps-item span{
+    width:105px;
+    border-left:1px solid #02172a;
+    border-top:1px solid #02172a;
+    height:30px;
+    line-height:30px;
+    font-size:16px;
+    color: #bbccdc;
+    float: left;
+}
+.lotM-table td.cps .cps-item span:first-child{
+    border-left:none;
+}
+.lotM-table td.cps .cps-item:first-child span{
+    border-top:none;
+}
+.lotM-table td.cps .cps-item .cps-name{
+    color: #00cc66;
+}
+.lotM-table td.cps .cps-item.default span,.lotM-table td.cps .cps-item.default .cps-name{
+    color: #687786;
+}
+/*****停止方案*****/
+.lotM-table .stop-plan{
+    min-width:170px;
+    width:170px;
+    display: none;
+}
+.lotM-table td.stop-plan{
+    color: #bbccdc;
+    font-size: 28px;
+}
+
+/*********************底部footer****************/
+.lotM-footer{
+    height:40px;
+    line-height:40px;
+    background: #e5edf1;
+    padding:0 20px;
+}
+.lotM-footer.fixed{
+    width:100%;
+    position: fixed;
+    bottom:0;
+    left:0;
+}
+.lotM-footer .btn-red{
+    color: #f7f7f7;
+    font-size:12px;
+    font-weight:bold;
+    height:30px;
+    line-height: 30px;
+    padding:0 15px;
+    background-color: #d62421;
+    float: left;
+    cursor: pointer;
+    margin-top:5px;
+    margin-right:20px;
+}
+.lotM-footer .btn-red:hover{
+    text-decoration: none;
+    background-color: #f42a26;
+}
+.lotM-footer .btn-red:active{
+    background-color: #b90c09;
+}
+.lotM-footer .fail-tip{
+    float: left;
+    color: #cc3333;
+    font-size:14px;
+}
+.lotM-footer .fail-tip span{
+    margin-right:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
